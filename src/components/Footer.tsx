@@ -23,6 +23,12 @@ const Footer = () => {
           LinkedIn
         </a>
       </p>
+      <p>
+        Pueden ver más sobre mí aquí:{" "}
+        <a href="https://portfolio2024-sage.vercel.app/" className="font-bold">
+          Portafolio
+        </a>
+      </p>
     </footer>
   );
 };
