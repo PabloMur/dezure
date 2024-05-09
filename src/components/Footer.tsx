@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="text-center py-4 mt-8">
+    <footer className="text-center p-4 mt-8">
       <p>Desarrollado por Pablo Murillo para una prueba técnica de Dezure.</p>
       <p>
         Contáctame en{" "}
