@@ -12,7 +12,7 @@ type MessageType = {
 
 type MessagesContainerProps = {
   messages: MessageType[];
-  callback: any;
+  callback: (start: number, end: number) => void;
 };
 
 const MessagesContainer: React.FC<MessagesContainerProps> = ({

@@ -63,7 +63,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-10 bg-slate-950 gap-5">
+    <main className="flex min-h-screen flex-col items-center justify-start p-5 sm:p-10 bg-slate-950 gap-5">
       <Audio ref={ref}></Audio>
       <MessagesContainer
         messages={messages}

@@ -3,12 +3,12 @@ type MessageType = {
   role: string;
   start: number;
   end: number;
-  callback: any;
+  callback: (start: number, end: number) => void;
 };
 
 const AgentMessage = ({ content, role, start, end, callback }: MessageType) => {
   const handleClick = () => {
-    callback(start);
+    callback(start, end);
   };
 
   return (
@@ -26,7 +26,7 @@ const AgentMessage = ({ content, role, start, end, callback }: MessageType) => {
 
 const UserMessage = ({ content, role, start, end, callback }: MessageType) => {
   const handleClick = () => {
-    callback(start);
+    callback(start, end);
   };
 
   return (
@@ -45,7 +45,7 @@ const UserMessage = ({ content, role, start, end, callback }: MessageType) => {
 //esto deberia recibirt un callback
 const Message = ({ content, role, start, end, callback }: MessageType) => {
   const handleClick = () => {
-    callback(start);
+    callback(start, end);
   };
 
   return role === "agent" ? (
@@ -54,7 +54,7 @@ const Message = ({ content, role, start, end, callback }: MessageType) => {
       role={role}
       start={start}
       end={end}
-      callback={callback}
+      callback={handleClick}
     />
   ) : (
     <UserMessage
@@ -62,7 +62,7 @@ const Message = ({ content, role, start, end, callback }: MessageType) => {
       role={role}
       start={start}
       end={end}
-      callback={callback}
+      callback={handleClick}
     />
   );
 };
