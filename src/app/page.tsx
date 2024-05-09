@@ -53,10 +53,13 @@ const messages = [
   },
 ];
 export default function Home() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLAudioElement | null>(null);
 
-  const handleAudio = () => {
-    alert(ref);
+  const handleAudio = (start: number, end: number) => {
+    if (ref.current) {
+      ref.current.currentTime = start;
+      ref.current.play();
+    }
   };
 
   return (
