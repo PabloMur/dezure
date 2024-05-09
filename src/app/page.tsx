@@ -57,8 +57,18 @@ export default function Home() {
 
   const handleAudio = (start: number, end: number) => {
     if (ref.current) {
-      ref.current.currentTime = start;
-      ref.current.play();
+      const audio = ref.current;
+
+      audio.currentTime = start;
+
+      audio.play();
+
+      const playbackDuration = (end - start) * 1000;
+
+      setTimeout(() => {
+        audio.pause();
+        audio.currentTime = start; // Reiniciar el tiempo al inicio
+      }, playbackDuration);
     }
   };
 
