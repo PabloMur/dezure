@@ -1,6 +1,6 @@
-const Audio = () => {
+const Audio = ({ ref }: any) => {
   return (
-    <audio controls src={"../../public/audio.mp3"} className="w-full"></audio>
+    <audio ref={ref} controls src={"/audio.mp3"} className="w-full"></audio>
   );
 };
 

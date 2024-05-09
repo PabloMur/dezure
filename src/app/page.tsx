@@ -1,5 +1,7 @@
+"use client";
 import { Audio } from "@/components/Audio";
 import { MessagesContainer } from "@/components/MessagesContainer";
+import { useRef } from "react";
 
 const messages = [
   {
@@ -51,10 +53,19 @@ const messages = [
   },
 ];
 export default function Home() {
+  const ref = useRef(null);
+
+  const handleAudio = () => {
+    alert(ref);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-24 bg-slate-950 gap-5">
-      <Audio></Audio>
-      <MessagesContainer messages={messages}></MessagesContainer>
+    <main className="flex min-h-screen flex-col items-center justify-start p-10 bg-slate-950 gap-5">
+      <Audio ref={ref}></Audio>
+      <MessagesContainer
+        messages={messages}
+        callback={handleAudio}
+      ></MessagesContainer>
     </main>
   );
 }
