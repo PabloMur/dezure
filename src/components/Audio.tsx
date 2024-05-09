@@ -9,9 +9,9 @@ const Audio = React.forwardRef<HTMLAudioElement | null>((props, ref) => {
       controls
       src="/audio.mp3"
       className="w-full"
-      initial={{ opacity: 0, y: 20 }} // Opacidad inicial y posición en Y
-      animate={{ opacity: 1, y: 0 }} // Opacidad final y posición en Y
-      transition={{ duration: 0.5 }} // Duración de la animación
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     ></motion.audio>
   );
 });
