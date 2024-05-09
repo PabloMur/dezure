@@ -18,7 +18,7 @@ const AgentMessage = ({ content, role, start, end, callback }: MessageType) => {
         className="bg-blue-100 text-gray-800 font-bold p-4 rounded-xl max-w-[800px]"
         onClick={handleClick}
       >
-        <p>{content}</p>
+        <p className="text-justify">{content}</p>
       </button>
     </div>
   );
@@ -36,7 +36,7 @@ const UserMessage = ({ content, role, start, end, callback }: MessageType) => {
         className="bg-gray-100 text-gray-800 font-bold p-4 rounded-xl max-w-[800px]"
         onClick={handleClick}
       >
-        <p className="text-left">{content}</p>
+        <p className="text-justify">{content}</p>
       </button>
     </div>
   );
