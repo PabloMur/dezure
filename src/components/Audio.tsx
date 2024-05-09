@@ -1,7 +1,7 @@
-import audio from "../../public/audio.wav";
-
 const Audio = () => {
-  return <audio src={audio}></audio>;
+  return (
+    <audio controls src={"../../public/audio.mp3"} className="w-full"></audio>
+  );
 };
 
 export { Audio };
