@@ -55,20 +55,13 @@ const messages = [
 export default function Home() {
   const ref = useRef<HTMLAudioElement | null>(null);
 
-  const handleAudio = (start: number, end: number) => {
+  const handleAudio = async (start: number, end: number) => {
     if (ref.current) {
       const audio = ref.current;
 
       audio.currentTime = start;
 
       audio.play();
-
-      const playbackDuration = (end - start) * 1000;
-
-      setTimeout(() => {
-        audio.pause();
-        audio.currentTime = start; // Reiniciar el tiempo al inicio
-      }, playbackDuration);
     }
   };
 

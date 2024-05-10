@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 const Header = () => {
   return (
     <header className="w-full flex justify-between items-center p-4 px-12">
-      {/* Animación para el logo */}
       <motion.div
         initial={{ scale: 0 }} // Escala inicial (invisible)
         animate={{ scale: 1 }} // Escala final (visible)
@@ -14,7 +13,6 @@ const Header = () => {
         <Logo />
       </motion.div>
 
-      {/* Animación para el título */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }} // Opacidad inicial y posición en Y
         animate={{ opacity: 1, y: 0 }} // Opacidad final y posición en Y
