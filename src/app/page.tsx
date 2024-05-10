@@ -62,6 +62,8 @@ export default function Home() {
       audio.currentTime = start;
 
       audio.play();
+
+      console.log(audio.currentTime);
     }
   };
 
