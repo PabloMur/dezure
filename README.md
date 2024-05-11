@@ -21,10 +21,11 @@ Develop a small web application using Next.js, Tailwind CSS, and TypeScript to d
 
 Tech Stack Used:
 
-Next.js
-Tailwind CSS
-Framer Motion
-Deployed on Vercel
+- Next.js
+- Tailwind CSS
+- Framer Motion
 
+Deployed on Vercel
 Deployment link: https://dezure.vercel.app/
+
 P.S. I found the challenge proposal excellent; I had a great time developing it. Regards!
